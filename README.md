@@ -1,24 +1,17 @@
-# README
+# hot-wallets-clone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A clone of the HOTWallets web application ([https://hotwallets-staging.herokuapp.com/](https://hotwallets-staging.herokuapp.com/)) written with Ruby on Rails and Tailwind CSS
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+- [SQLite version 3.x](https://www.sqlite.org/download.html)
+- [Ruby](https://www.ruby-lang.org/en/downloads/)
+- Ruby on Rails (`gem install rails`)
 
-* System dependencies
+## Running app
 
-* Configuration
+```sh
+bin/rails server
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Then navigate to [localhost:3000](localhost:3000).
