@@ -22,3 +22,7 @@ Then navigate to [localhost:3000](localhost:3000).
 ```sh
 rubocop
 ```
+
+
+
+TODO DB migration
