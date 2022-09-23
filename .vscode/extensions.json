@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "csstools.postcss",
+    "DavidAnson.vscode-markdownlint",
+    "EditorConfig.EditorConfig",
+    "kaiwood.endwise",
+    "Shopify.ruby-extensions-pack"
+  ]
+}
