@@ -1,4 +1,4 @@
-# hot-wallets-clone
+# hot-wallets-clone [![Rails Style Guide](https://img.shields.io/badge/code_style-community-brightgreen.svg)](https://rails.rubystyle.guide)
 
 A clone of the HOTWallets web application ([https://hotwallets-staging.herokuapp.com/](https://hotwallets-staging.herokuapp.com/)) written with Ruby on Rails and Tailwind CSS
 
@@ -16,3 +16,9 @@ bin/rails server
 ```
 
 Then navigate to [localhost:3000](localhost:3000).
+
+## Running static code analysis tool (Rubocop)
+
+```sh
+rubocop
+```
