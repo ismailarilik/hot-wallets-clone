@@ -13,7 +13,7 @@ A clone of the HOTWallets web application ([https://hotwallets-staging.herokuapp
 ## Running app
 
 ```sh
-bin/rails server
+bash bin/dev
 ```
 
 Then navigate to [localhost:3000](localhost:3000).
