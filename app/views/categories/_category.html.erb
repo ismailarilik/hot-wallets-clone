@@ -1,0 +1,40 @@
+<div id="<%= dom_id category %>">
+  <% if category.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(category.errors.count, 'error') %> prohibited this category from being destroyed:</h2>
+
+      <ul>
+        <% category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= category.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Context:</strong>
+    <%= category.context %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Icon:</strong>
+    <%= category.icon %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this category", category, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%=
+      link_to(
+        'Edit this category',
+        edit_category_path(category),
+        class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium"
+      )
+    %>
+    <hr class="mt-6">
+  <% end %>
+</div>

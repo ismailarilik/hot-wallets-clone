@@ -30,4 +30,24 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  categories:
+    create:
+      success: 'Category was successfully created.'
+    update:
+      success: 'Category was successfully updated.'
+    destroy:
+      success: 'Category was successfully destroyed.'
+  transactions:
+    create:
+      success: 'Transaction was successfully created.'
+    update:
+      success: 'Transaction was successfully updated.'
+    destroy:
+      success: 'Transaction was successfully destroyed.'
+  wallets:
+    create:
+      success: 'Wallet was successfully created.'
+    update:
+      success: 'Wallet was successfully updated.'
+    destroy:
+      success: 'Wallet was successfully destroyed.'
