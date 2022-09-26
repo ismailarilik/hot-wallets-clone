@@ -23,3 +23,15 @@ Then navigate to [localhost:3000](localhost:3000).
 ```sh
 rubocop
 ```
+
+## Running unit tests
+
+```sh
+bin/rails test
+```
+
+## Running system tests
+
+```sh
+bin/rails test:system
+```
