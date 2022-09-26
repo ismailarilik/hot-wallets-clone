@@ -8,6 +8,7 @@ A clone of the HOTWallets web application ([https://hotwallets-staging.herokuapp
 - [Ruby](https://www.ruby-lang.org/en/downloads/)
 - Ruby on Rails (`gem install rails`)
 - Install dependencies (`bundle install`)
+- Run DB migrations (`bin/rails db:migrate`)
 
 ## Running app
 
@@ -22,7 +23,3 @@ Then navigate to [localhost:3000](localhost:3000).
 ```sh
 rubocop
 ```
-
-
-
-TODO DB migration
