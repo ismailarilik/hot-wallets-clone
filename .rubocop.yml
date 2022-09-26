@@ -2,7 +2,6 @@ require:
   - rubocop-performance
   - rubocop-rails
   - rubocop-rake
-  - rubocop-rspec
   - rubocop-rubycw
 
 AllCops:

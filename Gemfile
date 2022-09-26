@@ -64,7 +64,6 @@ group :development do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rake', require: false
-  gem 'rubocop-rspec', require: false
   gem 'rubocop-rubycw', require: false
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
