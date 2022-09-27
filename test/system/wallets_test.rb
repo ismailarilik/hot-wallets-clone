@@ -5,6 +5,9 @@ require 'application_system_test_case'
 class WalletsTest < ApplicationSystemTestCase
   setup do
     @wallet = wallets(:one)
+    @user = users(:one)
+
+    login_as(@user)
   end
 
   test 'visiting the index' do

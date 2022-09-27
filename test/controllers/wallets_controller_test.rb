@@ -3,8 +3,17 @@
 require 'test_helper'
 
 class WalletsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
     @wallet = wallets(:one)
+    @user = users(:one)
+
+    sign_in @user
+  end
+
+  teardown do
+    sign_out @user
   end
 
   test 'should get index' do
