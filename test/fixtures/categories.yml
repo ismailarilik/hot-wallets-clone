@@ -4,8 +4,10 @@ one:
   name: MyString
   context: expense
   icon: MyString
+  user: one
 
 two:
   name: MyString
   context: expense
   icon: MyString
+  user: one

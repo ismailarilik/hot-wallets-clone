@@ -5,9 +5,11 @@ one:
   category: one
   price: 9.99
   wallet: one
+  user: one
 
 two:
   name: MyString
   category: two
   price: 9.99
   wallet: two
+  user: one

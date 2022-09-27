@@ -51,3 +51,4 @@ en:
       success: 'Wallet was successfully updated.'
     destroy:
       success: 'Wallet was successfully destroyed.'
+  not_authorized: 'You are not authorized to perform this action.'

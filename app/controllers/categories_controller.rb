@@ -3,30 +3,32 @@
 # class CategoriesController
 class CategoriesController < ApplicationController
   before_action :set_category, only: %i[show edit update destroy]
+  after_action :verify_authorized, except: :index
+  after_action :verify_policy_scoped, only: %i[index show edit update destroy]
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all
+    @categories = policy_scope(Category)
   end
 
   # GET /categories/1 or /categories/1.json
   def show
-    # show
+    authorize @category
   end
 
   # GET /categories/new
   def new
-    @category = Category.new
+    @category = new_category
   end
 
   # GET /categories/1/edit
   def edit
-    # edit
+    authorize @category
   end
 
   # POST /categories or /categories.json
   def create
-    @category = Category.new(category_params)
+    @category = new_category(category_params)
 
     respond_to do |format|
       if @category.save
@@ -41,6 +43,8 @@ class CategoriesController < ApplicationController
 
   # PATCH/PUT /categories/1 or /categories/1.json
   def update
+    authorize @category
+
     respond_to do |format|
       if @category.update(category_params)
         format.html { redirect_to category_url(@category), notice: t('.success') }
@@ -54,6 +58,8 @@ class CategoriesController < ApplicationController
 
   # DELETE /categories/1 or /categories/1.json
   def destroy
+    authorize @category
+
     respond_to do |format|
       if @category.destroy
         format.html { redirect_to categories_url, notice: t('.success') }
@@ -67,9 +73,14 @@ class CategoriesController < ApplicationController
 
   private
 
+  def new_category(category_params = {})
+    @category = Category.new({ **category_params, user: current_user })
+    authorize @category
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_category
-    @category = Category.find(params[:id])
+    @category = policy_scope(Category).find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
