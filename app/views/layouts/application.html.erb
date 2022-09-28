@@ -21,7 +21,8 @@
   </head>
 
   <body>
-    <header class="flex items-center border-b px-6 py-3">
+    <header class="border-b px-6 py-3">
+      <div class="container mx-auto flex items-center">
       <!-- Logo and title -->
       <%= link_to root_path, class: 'flex items-center' do %>
         <div>
@@ -35,6 +36,7 @@
       <!-- Sign out button -->
       <div class="ml-auto">
         <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: 'text-gray-700' %>
+      </div>
       </div>
     </header>
 
