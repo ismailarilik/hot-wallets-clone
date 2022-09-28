@@ -21,6 +21,18 @@
   </head>
 
   <body>
+    <header class="flex items-center border-b px-6 py-3">
+      <!-- Logo and title -->
+      <%= link_to root_path, class: 'flex items-center' do %>
+        <div>
+          <%= image_tag 'logo.svg', alt: 'Logo' %>
+        </div>
+        <div class="ml-2 text-3xl text-fuchsia-600 font-semibold">
+          HOTWallets
+        </div>
+      <% end %>
+    </header>
+
     <main class="container mx-auto mt-28 px-5 flex">
       <% if notice.present? %>
         <p
