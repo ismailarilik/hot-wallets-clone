@@ -4,6 +4,10 @@
     <%= wallet.name %>
   </p>
 
+  <div class="my-5">
+    <%= bar_chart Transaction.where(wallet: wallet).joins(:category).group('categories.name').sum(:price) %>
+  </div>
+
   <% if action_name != 'show' %>
     <%= link_to 'Show this wallet', wallet, class: 'rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium' %>
     <%=
