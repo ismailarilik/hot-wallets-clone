@@ -19,10 +19,10 @@ class TransactionsTest < ApplicationSystemTestCase
     visit transactions_url
     click_on 'New transaction'
 
-    fill_in 'Category', with: @transaction.category_id
+    select(@transaction.category.name, from: 'Category')
     fill_in 'Name', with: @transaction.name
     fill_in 'Price', with: @transaction.price
-    fill_in 'Wallet', with: @transaction.wallet_id
+    select(@transaction.wallet.name, from: 'Wallet')
     click_on 'Create Transaction'
 
     assert_text 'Transaction was successfully created'
@@ -33,10 +33,10 @@ class TransactionsTest < ApplicationSystemTestCase
     visit transaction_url(@transaction)
     click_on 'Edit this transaction', match: :first
 
-    fill_in 'Category', with: @transaction.category_id
+    select(@transaction.category.name, from: 'Category')
     fill_in 'Name', with: @transaction.name
     fill_in 'Price', with: @transaction.price
-    fill_in 'Wallet', with: @transaction.wallet_id
+    select(@transaction.wallet.name, from: 'Wallet')
     click_on 'Update Transaction'
 
     assert_text 'Transaction was successfully updated'
