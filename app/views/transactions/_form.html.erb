@@ -21,8 +21,9 @@
   <div class="my-5">
     <%= form.label :category_id %>
     <%=
-      form.text_field(
+      form.select(
         :category_id,
+        Category.all.collect {|category| [category.name, category.id]},
         class: 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'
       )
     %>
@@ -38,8 +39,9 @@
   <div class="my-5">
     <%= form.label :wallet_id %>
     <%=
-      form.text_field(
+      form.select(
         :wallet_id,
+        Wallet.all.collect {|wallet| [wallet.name, wallet.id]},
         class: 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'
       )
     %>
