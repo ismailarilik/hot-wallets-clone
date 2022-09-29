@@ -6,7 +6,7 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Category:</strong>
-    <%= transaction.category_id %>
+    <%= transaction.category.name %>
   </p>
 
   <p class="my-5">
@@ -16,7 +16,7 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Wallet:</strong>
-    <%= transaction.wallet_id %>
+    <%= transaction.wallet.name %>
   </p>
 
   <% if action_name != "show" %>
