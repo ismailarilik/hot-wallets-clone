@@ -33,6 +33,10 @@
           </div>
         <% end %>
 
+        <!-- Wallets button -->
+        <div>
+          <%= link_to 'Wallets', wallets_path, class: 'ml-8 text-2xl font-middle' %>
+        </div>
         <!-- Sign out button -->
         <div class="ml-auto">
           <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: 'text-gray-700' %>
