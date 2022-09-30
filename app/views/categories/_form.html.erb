@@ -14,7 +14,23 @@
   <div class="my-5">
     <%= form.label :name %>
     <%=
-      form.text_field :name, class: 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'
+      form.text_field(
+        :name,
+        class: %w(
+          block
+          shadow
+          rounded-md
+          border
+          border-gray-200
+          outline-none
+          px-3
+          py-2
+          mt-2
+          w-full
+          focus:border-fuchsia-600
+          focus:ring-fuchsia-600
+        )
+      )
     %>
   </div>
 
@@ -24,8 +40,23 @@
       form.select(
         :context,
         [['Income', 'income'], ['Expense', 'expense']],
-        selected: category.context,
-        class: 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'
+        { selected: category.context },
+        {
+          class: %w(
+            block
+            shadow
+            rounded-md
+            border
+            border-gray-200
+            outline-none
+            px-3
+            py-2
+            mt-2
+            w-full
+            focus:border-fuchsia-600
+            focus:ring-fuchsia-600
+          )
+        }
       )
     %>
   </div>
@@ -33,7 +64,23 @@
   <div class="my-5">
     <%= form.label :icon %>
     <%=
-      form.text_field :icon, class: 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full'
+      form.text_field(
+        :icon,
+        class: %w(
+          block
+          shadow
+          rounded-md
+          border
+          border-gray-200
+          outline-none
+          px-3
+          py-2
+          mt-2
+          w-full
+          focus:border-fuchsia-600
+          focus:ring-fuchsia-600
+        )
+      )
     %>
   </div>
 
