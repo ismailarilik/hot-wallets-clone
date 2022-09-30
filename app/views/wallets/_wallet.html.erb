@@ -5,7 +5,17 @@
   </p>
 
   <div class="my-5">
-    <%= bar_chart Transaction.where(wallet: wallet).joins(:category).group('categories.name').sum(:price) %>
+    <%=
+      bar_chart(
+        Transaction.where(wallet: wallet).joins(:category).group('categories.name').sum(:price),
+        xtitle: 'Price',
+        ytitle: 'Category',
+        prefix: '₺',
+        round: 2,
+        zeros: true,
+        title: 'Expenses and Incomes'
+      )
+    %>
   </div>
 
   <% if action_name != 'show' %>
