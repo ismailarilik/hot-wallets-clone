@@ -3,11 +3,11 @@
 one:
   name: Category 1
   context: expense
-  icon: MyString
+  icon: baby
   user: one
 
 two:
   name: Category 2
   context: expense
-  icon: MyString
+  icon: bank
   user: one
