@@ -63,27 +63,152 @@
     %>
   </div>
 
-  <div class="my-5">
-    <%= form.label :icon %>
-    <%=
-      form.text_field(
-        :icon,
-        class: %w(
-          block
-          shadow
-          rounded-md
-          border
-          border-gray-200
-          outline-none
-          px-3
-          py-2
-          mt-2
-          w-full
-          focus:border-fuchsia-600
-          focus:ring-fuchsia-600
-        )
-      )
-    %>
+  <p>Icon</p>
+
+  <div class="flex flex-wrap gap-x-10 gap-y-10 mt-5 mb-10">
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'baby' %>
+      <%= form.label :icon_baby, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/baby.svg', alt: 'Baby' %>
+        <div>Baby</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'bank' %>
+      <%= form.label :icon_bank, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/bank.svg', alt: 'Bank' %>
+        <div>Bank</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'cash' %>
+      <%= form.label :icon_cash, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/cash.svg', alt: 'Cash' %>
+        <div>Cash</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'clothes' %>
+      <%= form.label :icon_clothes, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/clothes.svg', alt: 'Clothes' %>
+        <div>Clothes</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'entertainment' %>
+      <%= form.label :icon_entertainment, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/entertainment.svg', alt: 'Entertainment' %>
+        <div>Entertainment</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'foods' %>
+      <%= form.label :icon_foods, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/foods.svg', alt: 'Foods' %>
+        <div>Foods</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'gift' %>
+      <%= form.label :icon_gift, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/gift.svg', alt: 'Gift' %>
+        <div>Gift</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'home' %>
+      <%= form.label :icon_home, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/home.svg', alt: 'Home' %>
+        <div>Home</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'medicine' %>
+      <%= form.label :icon_medicine, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/medicine.svg', alt: 'Medicine' %>
+        <div>Medicine</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'other' %>
+      <%= form.label :icon_other, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/other.svg', alt: 'Other' %>
+        <div>Other</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'personal_care' %>
+      <%= form.label :icon_personal_care, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/personal_care.svg', alt: 'Personal Care' %>
+        <div class="text-center">Personal Care</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'saving' %>
+      <%= form.label :icon_saving, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/saving.svg', alt: 'Saving' %>
+        <div>Saving</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'shopping' %>
+      <%= form.label :icon_shopping, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/shopping.svg', alt: 'Shopping' %>
+        <div>Shopping</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'stationary' %>
+      <%= form.label :icon_stationary, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/stationary.svg', alt: 'Stationary' %>
+        <div>Stationary</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'stock' %>
+      <%= form.label :icon_stock, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/stock.svg', alt: 'Stock' %>
+        <div>Stock</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'transport' %>
+      <%= form.label :icon_transport, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/transport.svg', alt: 'Transport' %>
+        <div>Transport</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'travel' %>
+      <%= form.label :icon_travel, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/travel.svg', alt: 'Travel' %>
+        <div>Travel</div>
+      <% end %>
+    </div>
+
+    <div class="flex items-center">
+      <%= form.radio_button :icon, 'wage' %>
+      <%= form.label :icon_wage, class: 'inline-flex flex-col items-center w-8 h-8 ml-1' do %>
+        <%= image_tag 'category_icons/wage.svg', alt: 'Wage' %>
+        <div>Wage</div>
+      <% end %>
+    </div>
   </div>
 
   <div class="inline">

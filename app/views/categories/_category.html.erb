@@ -14,19 +14,15 @@
   <% end %>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= category.name %>
+    <div class="font-medium text-2xl"><%= category.name %> (<%= category.context.capitalize %>)</div>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Context:</strong>
-    <%= category.context %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Icon:</strong>
-    <%= category.icon %>
-  </p>
+  <div class="my-5">
+    <div class="inline-flex flex-col items-center gap-y-3">
+      <%= image_tag "category_icons/#{category.icon}.svg", alt: category.icon.capitalize, class: 'w-32 h-32' %>
+      <div><%= category.icon.humanize.titleize %></div>
+    </div>
+  </div>
 
   <% if action_name != "show" %>
     <%= link_to "Show this category", category, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
