@@ -20,7 +20,7 @@ class CategoriesTest < ApplicationSystemTestCase
     click_on 'New category'
 
     select @category.context.capitalize, from: 'Context'
-    fill_in 'Icon', with: @category.icon
+    choose @category.icon.capitalize
     fill_in 'Name', with: @category.name
     click_on 'Create Category'
 
@@ -33,7 +33,7 @@ class CategoriesTest < ApplicationSystemTestCase
     click_on 'Edit this category', match: :first
 
     select @category.context.capitalize, from: 'Context'
-    fill_in 'Icon', with: @category.icon
+    choose @category.icon.capitalize
     fill_in 'Name', with: @category.name
     click_on 'Update Category'
 
