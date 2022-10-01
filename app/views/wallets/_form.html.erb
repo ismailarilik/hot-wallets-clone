@@ -39,4 +39,23 @@
   <div class="inline">
     <%= form.submit class: 'rounded-lg py-3 px-5 bg-fuchsia-600 text-white inline-block font-medium cursor-pointer' %>
   </div>
+
+  <% if wallet.transactions.any? %>
+    <div class="mt-14">
+      <div class="flex justify-between items-center">
+        <div class="font-semibold text-3xl inline">Transactions of this Wallet</div>
+        <%=
+          link_to(
+            "New transaction",
+            new_transaction_path,
+            class: 'rounded-lg py-3 px-5 bg-fuchsia-600 text-white block font-medium'
+          )
+        %>
+      </div>
+
+      <div id="transactions" class="min-w-full">
+        <%= render wallet.transactions %>
+      </div>
+    </div>
+  <% end %>
 <% end %>
