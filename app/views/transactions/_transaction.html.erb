@@ -1,23 +1,27 @@
 <div id="<%= dom_id transaction %>">
   <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= transaction.name %>
+    <div class="font-medium text-2xl">
+      <%= transaction.name %>
+      (<%= link_to transaction.category.name, transaction.category, class: 'text-fuchsia-600' %>)
+    </div>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Category:</strong>
-    <%= transaction.category.name %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Price:</strong>
-    <%= transaction.price %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Wallet:</strong>
-    <%= transaction.wallet.name %>
-  </p>
+  <div class="my-5">
+    <div class="inline-flex flex-col items-center gap-y-3">
+      <%=
+        image_tag(
+          "category_icons/#{transaction.category.icon}.svg",
+          alt: transaction.category.icon.capitalize,
+          class: 'w-48 h-48'
+        )
+      %>
+      <div>
+        <%= '-' if transaction.price.negative? %>₺<%= transaction.price.abs %>
+        in
+        <%= link_to transaction.wallet.name, transaction.wallet, class: 'text-fuchsia-600' %>
+      </div>
+    </div>
+  </div>
 
   <% if action_name != "show" %>
     <%=
@@ -30,6 +34,6 @@
         class: 'rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium'
       )
     %>
-    <hr class="mt-6">
+    <hr class="my-6">
   <% end %>
 </div>
