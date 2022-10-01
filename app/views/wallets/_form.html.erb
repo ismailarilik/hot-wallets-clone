@@ -1,7 +1,9 @@
 <%= form_with(model: wallet, class: 'contents') do |form| %>
   <% if wallet.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(wallet.errors.count, 'error') %> prohibited this wallet from being saved:</h2>
+      <div class="font-medium text-2xl">
+        <%= pluralize(wallet.errors.count, 'error') %> prohibited this wallet from being saved:
+      </div>
 
       <ul>
         <% wallet.errors.each do |error| %>

@@ -1,7 +1,9 @@
 <div id="<%= dom_id category %>">
   <% if category.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(category.errors.count, 'error') %> prohibited this category from being destroyed:</h2>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <div class="font-medium text-2xl">
+        <%= pluralize(category.errors.count, 'error') %> prohibited this category from being destroyed:
+      </div>
 
       <ul>
         <% category.errors.each do |error| %>

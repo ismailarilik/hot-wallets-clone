@@ -1,7 +1,9 @@
 <%= form_with(model: transaction, class: 'contents') do |form| %>
   <% if transaction.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+      <div class="font-medium text-2xl">
+        <%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:
+      </div>
 
       <ul>
         <% transaction.errors.each do |error| %>
