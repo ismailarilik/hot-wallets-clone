@@ -134,7 +134,7 @@
       button_to(
         "Cancel my account",
         registration_path(resource_name),
-        data: { confirm: "Are you sure?" },
+        data: { turbo: false },
         method: :delete,
         class: 'text-gray-700'
       )
