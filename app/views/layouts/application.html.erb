@@ -43,9 +43,11 @@
         </div>
 
         <!-- Sign out button -->
-        <div class="ml-auto">
-          <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: 'text-gray-700' %>
-        </div>
+        <% if current_user %>
+          <div class="ml-auto">
+            <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: 'text-gray-700' %>
+          </div>
+        <% end %>
       </div>
     </header>
 
