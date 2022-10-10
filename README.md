@@ -2,6 +2,8 @@
 
 A clone of the HOTWallets web application ([https://hotwallets-staging.herokuapp.com/](https://hotwallets-staging.herokuapp.com/)) written with Ruby on Rails and Tailwind CSS
 
+![Screenshot](https://github.com/ismailarilik/hot-wallets-clone/blob/main/screenshot.png?raw=true)
+
 ## Requirements
 
 - [SQLite version 3.x](https://www.sqlite.org/download.html)
