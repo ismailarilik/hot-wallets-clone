@@ -8,7 +8,6 @@ A clone of the HOTWallets web application ([https://hotwallets-staging.herokuapp
 
 - [SQLite version 3.x](https://www.sqlite.org/download.html)
 - [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
-- Ruby on Rails (`gem install rails`)
 - Install dependencies (`bundle install`)
 - Run DB migrations (`bin/rails db:migrate`)
 
